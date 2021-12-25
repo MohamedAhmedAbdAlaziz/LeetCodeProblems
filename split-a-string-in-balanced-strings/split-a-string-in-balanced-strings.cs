@@ -16,7 +16,7 @@ public class Solution {
 
                         coR++;
                         ss++;
-                    }//"RLRRRLLRLL"
+                    } 
                     else
                     {
                         coL++;
