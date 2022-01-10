@@ -1,10 +1,7 @@
 public class Solution {
     public IList<bool> KidsWithCandies(int[] candies, int extraCandies) {
-         int k = 0;
-            for (int i = 0; i < candies.Length; i++)
-            {
-                k = Math.Max(candies[i],k);
-            }
+        int k = candies.Max();
+            
             bool[] kids = new bool[candies.Length]; 
             for (int i = 0; i < candies.Length; i++)
             {
