@@ -3,9 +3,7 @@ public class Solution {
            List<int> newlist = new List<int>();
             for (int i = 0; i < nums.Length; i++)
             {
-                int k = index[i];
-              
-                newlist.Insert(k, nums[i]); 
+                 newlist.Insert(index[i], nums[i]); 
 
             }
 
