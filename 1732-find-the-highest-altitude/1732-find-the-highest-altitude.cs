@@ -1,13 +1,13 @@
 public class Solution {
     public int LargestAltitude(int[] gain) {
-       List<int> li = new List<int>();
-           li.Add(0);
+     
             int k = 0;
+           int max=0;
             for (int i = 0; i < gain.Length; i++)
             {
                 k += gain[i];
-                li.Add(k);
+               max= Math.Max(k,max);
             }
-            return li.Max();  
+            return max;  
     }
 }
