@@ -1,25 +1,33 @@
 public class Solution {
     public bool IsSumEqual(string firstWord, string secondWord, string targetWord) {
-          string k = "abcdefghijklmnopqrstuvwxyz";
-            string t="", m="", r="";
-            for (int i = 0; i < firstWord.Length; i++)
+        
+            string k = "abcdefghijklmnopqrstuvwxyz";
+            int t = 0, m = 0, r = 0;
+            int i = 0;
+            while (i < firstWord.Length || i < secondWord.Length || i < targetWord.Length)
             {
-              
-                 t +=k.IndexOf(firstWord[i]).ToString();
+                if (i < firstWord.Length)
+                {
+                    t = t * 10 + k.IndexOf(firstWord[i]);
+
+                }
+                if (i < secondWord.Length)
+                {
+                    m = m * 10 + k.IndexOf(secondWord[i]);
+
+
+                }
+                if (i < targetWord.Length)
+                {
+                    r = r * 10 + k.IndexOf(targetWord[i]);
+
+                }
+                i++;
 
             }
-            for (int i = 0; i < secondWord.Length; i++)
-            {
 
-                m += k.IndexOf(secondWord[i]).ToString();
-            }
-            for (int i = 0; i < targetWord.Length; i++)
-            {
 
-                r+= k.IndexOf(targetWord[i]).ToString();
-            }
-
-            if(Convert.ToInt32(t)+Convert.ToInt32(m)== Convert.ToInt32(r))
+            if (t + m == r)
             {
                 return true;
             }
