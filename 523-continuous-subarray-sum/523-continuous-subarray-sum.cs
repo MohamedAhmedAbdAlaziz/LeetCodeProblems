@@ -11,5 +11,7 @@ public class Solution {
         if (map.ContainsKey(sum) && i - map[sum] >= 2) return true;
         map[sum] = map.ContainsKey(sum) ? map[sum] : i;
     }
-    return false;}
+    return false;
+    
+    }
 }
