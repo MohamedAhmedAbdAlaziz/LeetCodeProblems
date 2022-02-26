@@ -11,13 +11,10 @@ public class Solution {
                     k++;
                     continue;
                 }
-                   
-                    c = Math.Max(c, k);
-                     k = 1;
-
-
-            }
-            c = Math.Max(c, k);
+                c = Math.Max(c, k);
+                k = 1;
+             }
+             c = Math.Max(c, k);
             return c;
     }
 }
