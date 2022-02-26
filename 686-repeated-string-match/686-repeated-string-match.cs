@@ -1,6 +1,10 @@
 public class Solution {
     public int RepeatedStringMatch(string a, string b) {
-            int t = 1;
+           if (a.IndexOf(b[0]) == -1)
+            {
+                return -1;
+            } 
+        int t = 1;
             string s = new string(a);
 
             while (s.Length< b.Length)
@@ -10,10 +14,7 @@ public class Solution {
             }
             int u=0;
             char bs = b[0];
-           if (s.IndexOf(b[0]) == -1)
-            {
-                return -1;
-            }
+        
             int n = (int)Math.Ceiling((double)b.Length / (double)a.Length);
             int tn = n - 1;
         
