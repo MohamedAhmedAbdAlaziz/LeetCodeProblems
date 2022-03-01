@@ -1,7 +1,8 @@
 public class Solution {
     public int CountHomogenous(string s) {
         
- Dictionary<int, int> prevSu = new Dictionary<int, int>();
+         int [] prevSu = new int [s.Length];
+             
             int m = (int)Math.Pow(10, 9) + 7;
 
             prevSu[0] = 1;
