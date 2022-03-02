@@ -9,22 +9,15 @@ public class Solution {
                 {
                     if (st.Count > 0)
                         S.Append(s[i]);
-
-                  st.Push(s[i]);
-
-                  
-                   
+                    st.Push(s[i]);
                 }
                 else
                 {
                     st.Pop();
                     if (st.Count > 0)
-                        S.Append(s[i]);
+                       S.Append(s[i]);
                 }
-                
-                             
-                 
-            }
+              }
             return S.ToString();  
     }
 }
