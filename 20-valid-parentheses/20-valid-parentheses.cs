@@ -17,10 +17,10 @@ public class Solution {
                 }
 
             }
-            if (stack.Count() > 0)
+            if (stack.Count() == 0)
             {
-                return false;
+                return true;
             }
-            return true;
+            return false;
     }
 }
