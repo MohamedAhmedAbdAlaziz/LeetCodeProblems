@@ -1,6 +1,6 @@
 public class Solution {
     public bool IsValid(string s) {
-       Stack<int> stack = new Stack<int>();
+      Stack<int> stack = new Stack<int>();
             for (int i = 0; i < s.Length; i++)
             {
                 if (stack.Count() > 0 && 
