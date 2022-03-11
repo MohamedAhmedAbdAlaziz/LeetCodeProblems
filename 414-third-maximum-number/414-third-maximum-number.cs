@@ -2,9 +2,9 @@ public class Solution {
     public int ThirdMax(int[] nums) {
             Stack<int> st = new Stack<int>();
             Array.Sort(nums);
-            Array.Reverse(nums);
-            st.Push(nums[0]);
-            for (int i = 1; i < nums.Length; i++)
+             
+            st.Push(nums[nums.Length-1]);
+            for (int i = nums.Length-2; i >=0; i--)
             {
                 if (st.Peek() != nums[i])
                 {
@@ -15,6 +15,6 @@ public class Solution {
                     return st.Pop();
                 }
             }
-            return nums[0];
+            return nums[nums.Length-1];
     }
 }
