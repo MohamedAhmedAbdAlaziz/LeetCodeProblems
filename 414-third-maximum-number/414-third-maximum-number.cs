@@ -1,18 +1,18 @@
 public class Solution {
     public int ThirdMax(int[] nums) {
-            Stack<int> st = new Stack<int>();
             Array.Sort(nums);
-             
-            st.Push(nums[nums.Length-1]);
+
+            int cout = 1, min = nums[nums.Length-1];
             for (int i = nums.Length-2; i >=0; i--)
             {
-                if (st.Peek() != nums[i])
+                if (nums[i] < min)
                 {
-                    st.Push(nums[i]);
+                    min = nums[i];
+                    cout++;
                 }
-                if (st.Count() == 3)
+                if (cout == 3)
                 {
-                    return st.Pop();
+                    return min;
                 }
             }
             return nums[nums.Length-1];
