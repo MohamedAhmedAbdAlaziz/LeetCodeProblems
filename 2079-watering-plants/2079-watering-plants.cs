@@ -1,6 +1,6 @@
 public class Solution {
     public int WateringPlants(int[] plants, int capacity) {
-        int steps = 0;
+      int steps = 0;
             int t= 0;
             int k = capacity;
             for (int i = 0; i < plants.Length; i++)
