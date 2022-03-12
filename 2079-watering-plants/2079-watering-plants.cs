@@ -5,8 +5,7 @@ public class Solution {
             int k = capacity;
             for (int i = 0; i < plants.Length; i++)
             {
-                int m = plants[i];
-                k = k - m;
+                k = k -  plants[i];
                 t++;
                 if (i + 1 != plants.Length &&  k < plants[i + 1])
                 {
