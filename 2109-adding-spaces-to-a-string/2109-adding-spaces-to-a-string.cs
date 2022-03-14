@@ -1,14 +1,16 @@
 public class Solution {
     public string AddSpaces(string s, int[] spaces) {
-        
-            StringBuilder ss = new StringBuilder(s);
-            int jj = 0;
-            for (int i = 0; i < spaces.Length; i++)
+          string[] ar = new string[spaces.Length+1];
+            ar[0] = s.Substring(0, spaces[0]);
+
+            for (int i = 1; i < spaces.Length; i++)
             {
-                ss.Insert(spaces[i] + jj, ' ');
-                jj++;
+                ar[i] = s.Substring(spaces[i-1], spaces[i]- spaces[i - 1]);
+                
             }
 
-            return ss.ToString();
+            ar[ar.Length - 1] = s.Substring(spaces[spaces.Length - 1], s.Length - spaces[spaces.Length - 1]);
+
+            return String.Join(" ", ar);
     }
 }
