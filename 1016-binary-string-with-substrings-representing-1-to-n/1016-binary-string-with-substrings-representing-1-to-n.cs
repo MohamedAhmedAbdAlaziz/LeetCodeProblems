@@ -3,8 +3,8 @@ public class Solution {
           int i = 1;
             while(i<=n)
             {
-                string t = Convert.ToString(i, 2);
-                if (!s.Contains(t)) {
+            
+                if (!s.Contains(Convert.ToString(i, 2))) {
                     return false;
                 }
                 i++;
