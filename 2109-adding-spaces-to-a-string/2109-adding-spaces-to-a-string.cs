@@ -4,10 +4,8 @@ public class Solution {
             ar[0] = s.Substring(0, spaces[0]);
 
             for (int i = 1; i < spaces.Length; i++)
-            {
                 ar[i] = s.Substring(spaces[i-1], spaces[i]- spaces[i - 1]);
-                
-            }
+              
 
             ar[ar.Length - 1] = s.Substring(spaces[spaces.Length - 1], s.Length - spaces[spaces.Length - 1]);
 
