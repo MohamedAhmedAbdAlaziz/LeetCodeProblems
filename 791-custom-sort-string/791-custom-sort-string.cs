@@ -27,8 +27,8 @@ public class Solution {
                 }
                 
             }
-            var dic2 = dic.Where(x => x.Value > 0);
-            foreach (var item in dic2)
+           // var dic2 = dic.Where(x => x.Value > 0);
+            foreach (var item in dic)
             {
                 int yy = item.Value;
                 while (yy> 0)
