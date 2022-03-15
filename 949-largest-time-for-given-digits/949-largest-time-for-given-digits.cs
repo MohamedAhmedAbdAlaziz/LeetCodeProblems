@@ -21,18 +21,13 @@ public class Solution {
                 int k1 =Math.Max( f * 10 + l, l * 10 + f);
                 int k2 = Math.Min(f * 10 + l, l * 10 + f);
 
-                if (k1 < 24 && k1 > k2)
-                {
+                if (k1 < 24 && k1 > k2) 
                     hh = k1;
-                }
                 else if (k2 < 24)
-                {
                     hh = k2;
-                }
                 else
-                {
-                    continue;
-                }
+                   continue;
+                
                 if (hh < 10) sh = "0" + hh;
                 else sh = hh.ToString();
                  
@@ -44,17 +39,13 @@ public class Solution {
                 int k4 = Math.Min(x * 10 + z, z * 10 + x);
 
                  if (k3 < 60 && k3 > k4)
-                {
-                    mm = k3;
-                }
+                   mm = k3;
+                
                 else if (k4 < 60)
-                {
-                    mm= k4;
-                }
+                  mm= k4;
                 else
-                {
-                    continue;
-                }
+                  continue;
+               
                 if (mm < 10) sm = "0" + mm;
                 else sm= mm.ToString();
 
@@ -65,8 +56,7 @@ public class Solution {
                     tm = Convert.ToInt32(tt);
                     ts = sh + ":" + sm;
                 }
-             
-            
+              
             }
            
             return ts;  
