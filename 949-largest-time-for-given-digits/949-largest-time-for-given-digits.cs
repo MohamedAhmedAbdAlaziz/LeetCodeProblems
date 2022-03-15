@@ -1,6 +1,6 @@
 public class Solution {
     public string LargestTimeFromDigits(int[] arr) {
-           Dictionary<int[], int[]> dic = new Dictionary<int[], int[]>();
+             Dictionary<int[], int[]> dic = new Dictionary<int[], int[]>();
             dic[new[] { arr[0], arr[1] }] = new[] { arr[2], arr[3] } ;
             dic[new[] { arr[0], arr[2] }] = new[] { arr[1], arr[3] };
             dic[new[] { arr[0], arr[3] }] = new[] { arr[2], arr[1] };
@@ -10,7 +10,8 @@ public class Solution {
 
             Dictionary<string, int> dic2 = new Dictionary<string, int>();
 
-
+            int tm = -1;
+            string ts = "";
             foreach (var item in dic)
             {
                 int f = item.Key[0];
@@ -56,14 +57,18 @@ public class Solution {
                 }
                 if (mm < 10) sm = "0" + mm;
                 else sm= mm.ToString();
+
+
                 string tt = sh + "" + sm;
-                if(!dic2.ContainsKey(sh + ":" + sm))
-                dic2[sh + ":" + sm] = Convert.ToInt32(tt);
+                if(tm< Convert.ToInt32(tt))
+                {
+                    tm = Convert.ToInt32(tt);
+                    ts = sh + ":" + sm;
+                }
+             
+            
             }
-            if (dic2.Count == 0) return "";
-            int t = dic2.Max(x => x.Value);
-            string ttt = dic2.Where(x => x.Value == t).Select(x => x.Key).FirstOrDefault();
-         
-            return ttt;    
+           
+            return ts;  
     }
 }
