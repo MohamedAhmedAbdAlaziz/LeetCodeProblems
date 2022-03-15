@@ -1,9 +1,9 @@
 public class Solution {
     public int FindGCD(int[] nums) {
-          int b = nums.Min();
-            int a = nums.Max();
-
-            while (b != 0)
+        Array.Sort(nums);
+            int b = nums[0];
+            int a = nums[nums.Length-1];
+             while (b != 0)
             {
                 int a2 = a;
                 a = b;
