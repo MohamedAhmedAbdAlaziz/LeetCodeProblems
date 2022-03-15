@@ -8,9 +8,7 @@ public class Solution {
             dic[new[] { arr[1], arr[3] }] = new[] { arr[0], arr[2] };
             dic[new[] { arr[2], arr[3] }] = new[] { arr[0], arr[1] };
 
-            Dictionary<string, int> dic2 = new Dictionary<string, int>();
-
-            int tm = -1;
+           int tm = -1;
             string ts = "";
             foreach (var item in dic)
             {
