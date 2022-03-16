@@ -1,5 +1,4 @@
- 
-public class Solution {
+ public class Solution {
     public ListNode RemoveElements(ListNode head, int val) {
     List<int> list = new List<int>();
             ListNode p = head;
@@ -15,7 +14,6 @@ public class Solution {
                 p = p.next;
                 index++;
             }
-
             for (int j = 0; j < list.Count; j++)
             {
                 int i = 1;
@@ -26,19 +24,11 @@ public class Solution {
                     i++;
                 }
                 if (list[j] == 0)
-                {
-                 //   p.next = head.next;
                     head = head.next ;
-                }
                else if (p.next.next == null)
-                {
                     p.next = null;
-                }
                 else
-                {
-                    p.next = p.next.next;
-                }
-           
+                    p.next = p.next.next;           
             }
 
             return head;
