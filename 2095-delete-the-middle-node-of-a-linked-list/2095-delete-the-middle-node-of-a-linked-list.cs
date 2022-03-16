@@ -11,19 +11,13 @@
  */
 public class Solution {
     public ListNode DeleteMiddle(ListNode head) {
-         
-            ListNode p = head;
-        
-            int index = 0;
+           ListNode p = head;
+          int index = 0;
             while (p != null)
-            {
-                p = p.next;
+            {  p = p.next;
                 index++;
             }
-        
-        if(index==1) return null;
-        
-            //  index = index - 1;
+          if(index==1) return null;
             index = index / 2;
            index = index + 1;
 
