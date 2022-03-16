@@ -23,13 +23,13 @@ public class Solution {
             index = index / 2;
             int i = 0;
 
-            ListNode p2 = head;
+          p =   head;
             while(i<index)
             {
-                p2 = p2.next;
+                p = p.next;
                 i++;
              }
 
-            return p2;
+            return p;
     }
 }
