@@ -12,14 +12,14 @@
 public class Solution {
     public ListNode MiddleNode(ListNode head) {
      
-           ListNode p =new ListNode(0,head);
+           ListNode p =   head;
             int index = 0;
             while (p != null)
             { 
                p = p.next;
                 index++;
             }
-            index = index - 1;
+          //  index = index - 1;
             index = index / 2;
             int i = 0;
 
