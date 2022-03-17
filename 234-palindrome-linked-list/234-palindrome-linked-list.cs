@@ -33,9 +33,8 @@ public class Solution {
             while(right != null)
             {
                 if(left.val != right.val)
-                {
-                    return false;
-                }
+                   return false;
+                
                 left = left.next;
                 right = right.next;
             }
