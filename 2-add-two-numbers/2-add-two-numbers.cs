@@ -20,14 +20,13 @@ public class Solution {
             int rest = 0;
             while(p!= null || p2 != null)
             {
-                int t1 = 0;
-                int t2 = 0;
-                          if (p != null)
+                         int t1 = 0;
+                         int t2 = 0;
+                           if (p != null)
                           t1 = p.val;
                           if (p2 != null)
-                           t2 = p2.val;
-
-                    int result = t1 + t2+rest;
+                          t2 = p2.val;
+                     int result = t1 + t2+rest;
                     if (result / 10 == 1)
                     {
                         p4.next = new ListNode(result % 10, null);
@@ -40,22 +39,14 @@ public class Solution {
                         p4 = p4.next;
                         rest = 0;
                     }
-
-                
                 if(p!=null)
-                p = p.next;
+                   p = p.next;
                 if (p2 != null)
-                       p2 = p2.next;
+                   p2 = p2.next;
 
             }
-        
-                if (rest > 0)
-               {
-                       p4.next = new ListNode(rest, null);
-                       // p4 = p4.next;
-                 // p4.val += rest;
-             
-              }
+          if (rest > 0)  p4.next = new ListNode(rest, null);
+               
             return p3.next;
     }
 }
