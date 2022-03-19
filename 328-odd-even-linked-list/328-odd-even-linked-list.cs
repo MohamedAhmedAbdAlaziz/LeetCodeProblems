@@ -1,3 +1,14 @@
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     public ListNode(int val=0, ListNode next=null) {
+ *         this.val = val;
+ *         this.next = next;
+ *     }
+ * }
+ */
 public class Solution {
     public ListNode OddEvenList(ListNode head) {
          if(head==null) return null;     
@@ -19,12 +30,15 @@ public class Solution {
                     int temp3 = k.val;
                     for (int i = 0; i < t; i++)
                     {
-                          int temp32 = k.next.val;
+                        int temp32 = k.next.val;
                           k.next.val =temp3;
-                          temp3 = temp32;
-                           k = k.next;
-                     }
-                    p.next.val = temp3;
+                        temp3 = temp32;
+                      
+                        k = k.next;
+
+                    }
+                     
+                        p.next.val = temp3;
                 }
                 p = p.next;
                 if (p2.next == null)
