@@ -11,47 +11,40 @@
  */
 public class Solution {
     public ListNode MergeInBetween(ListNode list1, int a, int b, ListNode list2) {
-          ListNode p = list1;
+           ListNode p = list1;
             ListNode p2 = list2;
-            ListNode p3 = new ListNode(0, p);
-            ListNode p4 = p3;
-           int index = 0;
+            int index = 0;
             while (p!= null)
             {
               
-                if(index== a)
+                if(index== a-1)
                 {
                    
                     while(p2 != null)
                     {
-                        p4.next =new ListNode(p2.val,null);
-                        p4 = p4.next;
+                        ListNode node = new ListNode(p2.val, null);
+                        node.next = p.next;
+                        p.next = node;
+           
+
                         p2 = p2.next;
+                        p = p.next;
+
+                    }
+                    while (index <= b - 1)
+                    {
+                        if(p.next != null)
+                          p.next = p.next.next;
+                         
+                        index++;
                     }
                     break;
-              }
-
-                p = p.next;
-                p4 = p4.next;
-                index++;
-
+                } 
+                 p = p.next;
+                 index++;
             }
 
-            while(p!= null)
-            {
-               if (index == b)
-               {
-                    if (p.next != null)
-                        p4.next = p.next;
-                    break;
-               }
-              
-                p = p.next;
-              index++;
-
-            }
-
-
-            return p3.next;
+             
+            return list1;
     }
 }
