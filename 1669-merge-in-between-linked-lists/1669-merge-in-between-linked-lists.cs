@@ -18,19 +18,14 @@ public class Solution {
             {
               
                 if(index== a-1)
-                {
-                   
-                    while(p2 != null)
+                {  while(p2 != null)
                     {
                         ListNode node = new ListNode(p2.val, null);
                         node.next = p.next;
                         p.next = node;
-           
-
                         p2 = p2.next;
                         p = p.next;
-
-                    }
+                     }
                     while (index <= b - 1)
                     {
                         if(p.next != null)
@@ -43,8 +38,7 @@ public class Solution {
                  p = p.next;
                  index++;
             }
-
-             
+       
             return list1;
     }
 }
