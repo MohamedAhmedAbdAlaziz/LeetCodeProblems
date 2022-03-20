@@ -11,18 +11,20 @@
  */
 public class Solution {
     public ListNode ReverseList(ListNode head) {
-         ListNode prev = null;
-            ListNode curr = head;
+        if (head == null ||
+               head.next == null)
+                return head;
 
-            while(curr!= null)
-            {
-                ListNode next = curr.next;
-                curr.next = prev;
-                prev = curr;
-                curr = next;
+            // Reverse the rest list and put 
+            // the first element at the end
+            ListNode rest = ReverseList(head.next);
+            head.next.next = head;
 
-            }
+            // Tricky step --
+            // see the diagram
+            head.next = null;
 
-            return prev;
+            // Fix the head pointer
+            return rest;
     }
 }
