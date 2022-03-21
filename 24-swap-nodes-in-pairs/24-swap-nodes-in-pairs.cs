@@ -22,8 +22,7 @@ public class Solution {
                 seconnd.next = curr;
                 curr.next = nxtpair;
                 pre.next = seconnd;
-
-                pre = curr;
+                 pre = curr;
                 curr = nxtpair;
 
             }
