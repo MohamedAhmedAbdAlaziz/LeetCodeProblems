@@ -15,18 +15,16 @@ public class Solution {
             ListNode p = p2;
             int t = 0;
             while (p != null)
-            {
-                t = 0;
+            {      t = 0;
                   if (p.next==null||p.next.next == null) break;
 
                     while(p.next.val == p.next.next.val)
                     {
                         p.next = p.next.next;
                   if (p.next==null||p.next.next == null){
-                   p.next = p.next.next;
+                       p.next = p.next.next;
                       break;
-                      
-                  } 
+                         } 
                       if(p.next.val != p.next.next.val)
                     {
                         ListNode temp = p.next.next;
