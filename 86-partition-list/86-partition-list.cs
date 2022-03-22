@@ -11,26 +11,23 @@ public class Solution {
              
             while (p!= null)
             {
+                ListNode temp=null;
                 if (p.val < x) {
-                    ListNode temp = p.next;
+                      temp = p.next;
                        
                         p.next = null;
                         te.next = p;
                         te = te.next;
-  
-                        
-                    p = temp;
-
-                }
+                     }
                 else
                 {
-                    ListNode temp = p.next;
-
+                      temp = p.next;
                     p.next = null;
                     te2.next = p;
                     te2 = te2.next;
-                    p = temp;
+                  
                 }
+                  p = temp;
 
             }
           left = left.next;
