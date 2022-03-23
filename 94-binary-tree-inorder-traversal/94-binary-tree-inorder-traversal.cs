@@ -15,8 +15,7 @@ public class Solution {
     public IList<int> InorderTraversal(TreeNode root) {
 
             List<int> list = new List<int>();
-
-           inorder( root,list );
+            inorder( root,list );
            return list;
     }
     
