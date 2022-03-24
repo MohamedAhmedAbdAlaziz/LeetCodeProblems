@@ -12,13 +12,28 @@
  * }
  */
 public class Solution {
-    public int SumOfLeftLeaves(TreeNode root, int sum =0) {
-        if (root == null) return 0;
-         
-            if (root.left != null && root.left.left == null && root.left.right == null) 
-                return  root.left.val + SumOfLeftLeaves(root.right);
-            else
-            return SumOfLeftLeaves(root.left) + SumOfLeftLeaves(root.right);
+    public int SumOfLeftLeaves(TreeNode root) {
+      Stack<TreeNode> stack = new Stack<TreeNode>();
+            TreeNode cur = root;
+            
+            int sum = 0;
+            while (stack.Count > 0 || cur != null)
+            {
+
+                while (cur != null)
+                {
+                    stack.Push(cur);
+                 cur = cur.left;
+                if(cur != null &&cur.left == null && cur.right == null   )
+                    sum+=cur.val;
+
+                }
+                cur = stack.Pop();
+             
+                cur = cur.right;
+            }
+
+            return sum;
 
         }
 }
