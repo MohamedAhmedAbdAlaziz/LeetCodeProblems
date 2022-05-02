@@ -2,7 +2,7 @@ public class Solution {
     public bool BackspaceCompare(string s, string t)
     { 
       Stack<char> stack = new Stack<char>();
-            Stack<char> stack2 = new Stack<char>();
+      Stack<char> stack2 = new Stack<char>();
 
             for (int i = 0; i < s.Length; i++)
             {
