@@ -2,10 +2,7 @@ public class Solution {
     public int FindUnsortedSubarray(int[] nums) {
         int[] ArrayCopy = new int[nums.Length];
 
-            for (int i = 0; i < ArrayCopy.Length; i++)
-            {
-                ArrayCopy[i] = nums[i];
-            }
+          Array.Copy( nums,  ArrayCopy, nums.Length);
             Array.Sort(nums);
             int first = -1;
             int last = -1;
