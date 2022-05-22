@@ -5,18 +5,14 @@ public class Solution {
            
             for (int i = 0; i < arr.Length; i++)
             {
-                if (dic1.ContainsKey(arr[i]))
-                {
-                    dic1[arr[i]] += 1; 
-                }
-                else
-                {
-                    dic1[arr[i]] = 1;
+                if (dic1.ContainsKey(arr[i]))  dic1[arr[i]] += 1; 
+             
+                else  dic1[arr[i]] = 1;
 
-                }
+                
             }
 
-       //  var rr= dic1.OrderBy(x => x.Value);
+       
             var rr = dic1.OrderBy(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
             int t = 0;
             foreach (var item in rr)
