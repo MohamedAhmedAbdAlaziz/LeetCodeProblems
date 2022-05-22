@@ -10,9 +10,8 @@ public class Solution {
                        t.Add(nums[i]);
                     d[nums[i]] += 1;
                 }   
-                else { 
-                    d[nums[i]] = 1;
-                }
+                else   d[nums[i]] = 1;
+               
             }
             return t;
     }
