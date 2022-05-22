@@ -33,12 +33,8 @@ public class Solution {
                     }
                 }
             }
-            List<string> list = new List<string>();
+              List<string>  list = dic.Select(x => x.Value + " " + x.Key  ).ToList();
 
-            foreach (var item in dic)
-            {
-                list.Add(item.Value + " " + item.Key);
-            }
 
 
             return list;
