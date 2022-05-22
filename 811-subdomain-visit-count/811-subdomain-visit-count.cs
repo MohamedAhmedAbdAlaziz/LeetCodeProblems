@@ -3,11 +3,9 @@ public class Solution {
         var dic = new Dictionary<string, int>();
             for (int i = 0; i < cpdomains.Length; i++)
             {
-
-
-                int tt2 = cpdomains[i].LastIndexOf(" ");
-                int t2 = Int32.Parse(cpdomains[i].Substring(0, tt2));
-                string uu = cpdomains[i].Substring(tt2 + 1);
+          
+                int t2 = Int32.Parse(cpdomains[i].Substring(0,  cpdomains[i].LastIndexOf(" ")));
+                string uu = cpdomains[i].Substring( cpdomains[i].LastIndexOf(" ") + 1);
                 string[] tty  = uu.Split(".");
 
                 string my = "";
