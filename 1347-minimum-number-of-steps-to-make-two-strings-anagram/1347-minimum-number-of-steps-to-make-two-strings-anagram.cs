@@ -6,27 +6,17 @@ public class Solution {
             for (int i = 0; i < s.Length; i++)
             {
 
-                if (dic.ContainsKey(s[i]))
-                {
-                    dic[s[i]] += 1;
-                }
-                else
-                {
-                    dic[s[i]] = 1;
-
-
-                }
+                if (dic.ContainsKey(s[i]))   dic[s[i]] += 1;
+               
+                else  dic[s[i]] = 1;
+   
             }
             for (int i = 0; i < t.Length; i++)
             {
-                if (dic2.ContainsKey(t[i]))
-                {
-                    dic2[t[i]] += 1;
-                }
-                else
-                {
-                    dic2[t[i]] = 1;
-                 }
+                if (dic2.ContainsKey(t[i]))  dic2[t[i]] += 1;
+               
+                else  dic2[t[i]] = 1;
+                 
             }
              int tt = 0;
             foreach (var item in dic2)
@@ -34,15 +24,12 @@ public class Solution {
                 char ty = item.Key;
                 if (dic.ContainsKey(ty) && dic[ty] != dic2[ty])
                 {
-                    if (dic[ty] < dic2[ty])
-                    {
-                        tt += Math.Abs(dic[ty] - dic2[ty]);
-                    }
+                    if (dic[ty] < dic2[ty])   tt += Math.Abs(dic[ty] - dic2[ty]);
+             
                 }
-                else if (!dic.ContainsKey(ty))
-                {
+                else if (!dic.ContainsKey(ty)) 
                     tt += dic2[ty];
-                }
+                
             }
                
 
