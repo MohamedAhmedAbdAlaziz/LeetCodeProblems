@@ -14,10 +14,9 @@ public class Solution {
             else
             {
                 List<IList<int>> g = new List<IList<int>>()  ;
-                foreach (var item in list)
-                {
-                    g.Add(item);
-                }
+                
+                    g.AddRange(list);
+                
 
                
 
