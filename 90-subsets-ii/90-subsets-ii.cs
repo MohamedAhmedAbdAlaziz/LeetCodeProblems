@@ -2,9 +2,7 @@ public class Solution {
     public IList<IList<int>> SubsetsWithDup(int[] nums) {
        var y=   Subsets(nums );
           var dic = new Dictionary< string , IList<int>>();
-             
-          
-            dic[""] = new List<int> { };
+             dic[""] = new List<int> { };
             foreach (var item in y)
             {
                 var yy = "";
@@ -17,12 +15,7 @@ public class Solution {
 
                     }
                 }
-                // var yy=item.Select(x=>x.ToString()).Aggregate((x,y)=>x+""+y);
-                
-
-            }
-
-           return dic.Select(x => x.Value).ToList();
+           }  return dic.Select(x => x.Value).ToList();
     }
     public IList<IList<int>> Subsets(int[] nums ,int index=0) {
         if (index == nums.Length )
