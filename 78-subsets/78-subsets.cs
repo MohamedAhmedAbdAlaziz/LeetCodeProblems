@@ -11,8 +11,7 @@ public class Solution {
                 list.Add(new List<int>() {nums[t] });
                 return list;
             }
-            else
-            {
+            
                 List<IList<int>> g = new List<IList<int>>()  ;
                 
                     g.AddRange(list);
@@ -24,10 +23,7 @@ public class Solution {
                     g.Add(yf);
 
                 }
-
+           return g;
             
-
-                return g;
-            }
     }
 }
