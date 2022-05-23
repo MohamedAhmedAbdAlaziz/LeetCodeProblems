@@ -16,11 +16,7 @@ public class Solution {
                 List<IList<int>> g = new List<IList<int>>()  ;
                 
                     g.AddRange(list);
-                
-
-               
-
-                foreach (var item in list)
+                   foreach (var item in list)
                         {
                     List<int> yf = new List<int>();
                     yf.AddRange(item);
