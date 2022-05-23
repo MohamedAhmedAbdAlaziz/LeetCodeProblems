@@ -28,10 +28,7 @@ public class Solution {
                     dic2[t[i]] = 1;
                  }
             }
-            dic = dic.OrderBy(x => x.Value).ToDictionary(x=>x.Key, y=>y.Value);
-            dic2 = dic2.OrderBy(x => x.Value).ToDictionary(x => x.Key, y => y.Value);
-
-            int tt = 0;
+             int tt = 0;
             foreach (var item in dic2)
             {
                 char ty = item.Key;
