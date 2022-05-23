@@ -10,10 +10,8 @@ public class Solution {
                 {
                      yy = item.OrderBy(x=>x).Select(x => x.ToString()).Aggregate((x, y) => x + "" + y);
                     if (!dic.ContainsKey(yy))
-                    {
                         dic[yy] = item;
-
-                    }
+                    
                 }
            }  return dic.Select(x => x.Value).ToList();
     }
