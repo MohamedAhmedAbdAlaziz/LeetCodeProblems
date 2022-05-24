@@ -9,8 +9,10 @@ public class Solution {
                 Array.Reverse(charArray);
                 string tt= new string(charArray);
                
-                if (dic.ContainsKey(tt))
-                { t += 4;
+                if (dic.ContainsKey(tt) )
+                {  
+                    
+                    t += 4;
                     if(dic[tt]==1)
                     dic.Remove(tt);
                     else
