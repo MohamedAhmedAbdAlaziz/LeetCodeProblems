@@ -22,8 +22,11 @@ public class Solution {
                  else   dic[words[i]] = 1;
               
             }
-           var ttt = dic.Where(x => x.Key[0] == x.Key[1]).FirstOrDefault();
-            if (ttt.Key != null) t+=2;
+             foreach (var x in dic)
+            {
+                if (x.Key[0] == x.Key[1])
+                    return t + 2;
+            }
             return t;
 
     }
