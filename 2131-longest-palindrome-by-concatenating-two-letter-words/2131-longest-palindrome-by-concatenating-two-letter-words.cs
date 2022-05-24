@@ -30,9 +30,9 @@ public class Solution {
                     dic[words[i]] = 1;
                 }
             }
-
-            var ttt = dic.Where(x => x.Key[0] == x.Key[1]).Select(x=>x.Value).ToList();
-            if (ttt.Count != 0) t+=2;
+         
+            var ttt = dic.Where(x => x.Key[0] == x.Key[1]).FirstOrDefault();
+            if (ttt.Key != null) t+=2;
             return t;
 
     }
