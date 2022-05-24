@@ -10,28 +10,19 @@ public class Solution {
                 string tt= new string(charArray);
                
                 if (dic.ContainsKey(tt))
-                {
-
-                    t += 4;
+                { t += 4;
                     if(dic[tt]==1)
                     dic.Remove(tt);
                     else
                         dic[tt] -= 1;
-
                 }
                 else if (dic.ContainsKey(words[i]))
-                {
-                    
-                        dic[words[i]] += 1;
-
-                }
-                 else
-                {
-                    dic[words[i]] = 1;
-                }
+                     dic[words[i]] += 1;
+ 
+                 else   dic[words[i]] = 1;
+              
             }
-         
-            var ttt = dic.Where(x => x.Key[0] == x.Key[1]).FirstOrDefault();
+           var ttt = dic.Where(x => x.Key[0] == x.Key[1]).FirstOrDefault();
             if (ttt.Key != null) t+=2;
             return t;
 
