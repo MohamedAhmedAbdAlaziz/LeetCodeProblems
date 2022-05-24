@@ -5,21 +5,13 @@ public class Solution {
             int i = t;
             List<int> list = new List<int>();
             while ( i < nums.Length && nums[i] ==target )
-            {
-
-               
-                i++;
-            }
-                        list.Add(i-1);
+             i++;
+              list.Add(i-1);
 
              i = t-1;
             while ( i >=0 && nums[i] ==target )
-            {
-
-            
-                i--;
-            }
-          list.Insert(0, i+1);
+            i--;
+               list.Insert(0, i+1);
             return list.ToArray();
     }
     
@@ -29,18 +21,12 @@ public class Solution {
             while (min <= max)
             {
                 int mid = (min + max) / 2;
-                if(target== nums[mid])
-                {
-                    return mid;
-                }
-                else if(target< nums[mid])
-                {
+                if(target== nums[mid])   return mid;
+              
+                else if(target< nums[mid]) 
                     max = mid - 1;
-                }
-                else
-                {
-                    min = mid + 1;
-                }
+                 else   min = mid + 1;
+                 
             }
             return -1;
     }
