@@ -1,9 +1,8 @@
 public class Solution {
     public string MinRemoveToMakeValid(string s) {
               Stack<int> stack = new Stack<int>();
-            int i = 0;
-
-            for (  i = 0; i < s.Length; i++)
+           
+            for ( int i = 0; i < s.Length; i++)
             {
                 if (stack.Count() > 0 && s[stack.Peek()] == '(' && s[i] == ')') 
                     stack.Pop();
