@@ -9,18 +9,15 @@ public class Solution {
                 string s2 = new string(charArray);
                 
 
-                if (Dic.ContainsKey(s2))
-                {
-                    Dic[s2].Add(s);
+                if (Dic.ContainsKey(s2))    Dic[s2].Add(s);
                   
-                }
-                else
-                {
+               
+                else 
                     Dic[s2] = new List<string>()
                     {
                         s
                     };
-                }
+                
             }
 
 
