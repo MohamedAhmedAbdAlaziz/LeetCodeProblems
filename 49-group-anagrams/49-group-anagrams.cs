@@ -10,8 +10,7 @@ public class Solution {
                 
 
                 if (Dic.ContainsKey(s2))    Dic[s2].Add(s);
-                  
-               
+                
                 else 
                     Dic[s2] = new List<string>()
                     {
@@ -19,13 +18,10 @@ public class Solution {
                     };
                 
             }
-
-
-            var t= Dic.Select(x => x.Value) ;
-            List<IList<string>> n = new List<IList<string>>();
-            foreach (var item in t)
+    List<IList<string>> n = new List<IList<string>>();
+            foreach (var item in Dic)
             {
-                n.Add(item);
+                n.Add(item.Value);
             }
             return n;
 
