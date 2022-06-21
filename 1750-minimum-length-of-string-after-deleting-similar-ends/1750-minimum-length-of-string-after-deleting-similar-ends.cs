@@ -2,15 +2,13 @@ public class Solution {
     public int MinimumLength(string s) {
         int k = 0;
             int l = s.Length-1;
-            char[] charArray = s.ToCharArray();
-            Array.Reverse(charArray);
-             string s2= new string(charArray);
+          
             while ( s[l] == s[k] && k< s.Length && l>=0 && l>k)
             {
                 if (l - k == 1 || l == k) return 0;
 
                while (l > k && s[k] == s[k + 1] ) k++;
-                while (l > k && s[l] == s[l - 1]  ) l--;
+                while (l > k && s[l] == s[l - 1] ) l--;
                 if (l - k == 1 || l==k) return 0;
 
                 k++;
