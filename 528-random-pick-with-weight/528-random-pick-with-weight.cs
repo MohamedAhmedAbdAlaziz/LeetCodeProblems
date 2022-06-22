@@ -1,8 +1,8 @@
 public class Solution {
        int[] nums ;
-    int sum ;
+     int sum ;
      Dictionary<int, int> dic = new Dictionary<int, int>();
-               List<int> list = new List<int>();
+      List<int> list = new List<int>();
 
     public Solution(int[] w) {
             nums= w;
@@ -13,14 +13,12 @@ public class Solution {
                 if (!dic.ContainsKey(i))
                 {
                     double t= (nums[i]* 1.0 / sum) * 100;
-                    dic[i] =(int) t;
-
+                    dic[i] =(int)t;
                 }
             }
             
           foreach (var item in dic)
-            { 
-                    for (int i = 0; i < item.Value; i++)
+            {  for (int i = 0; i < item.Value; i++)
                     {
                     list.Add(item.Key);
                   
@@ -33,12 +31,12 @@ public class Solution {
     
     public int PickIndex() {
         
-        if(list.Count==0) return 0;
+        if(list.Count<=1) return 0;
           Random random = new Random();
            int k= random.Next(0, list.Count);
 
         
-         return list.Count==1? 0: list[k];
+         return   list[k];
     }
 }
 
