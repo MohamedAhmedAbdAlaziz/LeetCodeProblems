@@ -20,8 +20,7 @@ public class Solution {
     }
     
     public int Pick(int target) {
-      var d=dic.Where(x => x.Key == target).Select(x => x.Value).FirstOrDefault().ToList();
-
+    var d=dic[target];
             Random random = new Random();
            int k= random.Next(0, d.Count);
 
