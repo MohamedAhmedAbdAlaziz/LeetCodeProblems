@@ -1,8 +1,8 @@
 public class Solution {
        int[] nums ;
-     int sum ;
+    int sum ;
      Dictionary<int, int> dic = new Dictionary<int, int>();
-      List<int> list = new List<int>();
+               List<int> list = new List<int>();
 
     public Solution(int[] w) {
             nums= w;
