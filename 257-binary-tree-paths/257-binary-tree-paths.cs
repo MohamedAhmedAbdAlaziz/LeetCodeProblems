@@ -30,15 +30,12 @@ public class Solution {
 
                 list.Add(s);
             }
-          //  s += root.val;
-        
-              if(s=="")
+               if(s=="")
                 s += root.val;
                else
                 s +="->"+ root.val;
-            //if(root.left!=null)
-            BinaryTree(root.left, s, list);
-           // if (root.right != null)
+        
+                BinaryTree(root.left, s, list);
                 BinaryTree(root.right, s, list);
 
 
