@@ -3,14 +3,11 @@ public class Solution {
         if(s.Length< k) return false;
             char[] arr = new char[26];
             for (int i = 0; i < s.Length; i++)
-            {
-                arr[s[i] - 'a']++;
-            }
+             arr[s[i] - 'a']++;
             int km = 0;
             for (int i = 0; i < arr.Length; i++)
-            {
                 if (arr[i] % 2 != 0) km++;
-            }
+            
             return km <= k;
     }
 }
