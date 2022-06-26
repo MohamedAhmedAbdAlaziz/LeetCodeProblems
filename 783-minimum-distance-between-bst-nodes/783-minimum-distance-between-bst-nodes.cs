@@ -29,8 +29,8 @@ public class Solution {
         {
             if (root != null)
             {
-                inorder(root.left, list);
-                list.Add(root.val);
+                 list.Add(root.val);
+                inorder(root.left, list);               
                 inorder(root.right, list);
             }
         }
