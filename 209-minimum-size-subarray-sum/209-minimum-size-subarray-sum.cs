@@ -14,7 +14,9 @@ public class Solution {
                 {
                     res = Math.Min(res, (right - left) + 1);
                     sum -= nums[left];
-                    left++;
+                     if(sum==target && res== 1) return 1;
+
+                     left++;
                 }
                 v++;
                 right++;
