@@ -15,11 +15,15 @@ public class Solution {
              
                 
               while(stack.Count()!= 0)
-            {
+               {
                 for (int i = nums.Length - 1; i >= 0; i--)
                 {
                     if (nums[i]>= nums[stack.Peek()])
                     {
+                        if(t>i - stack.Peek()){
+                            stack.Pop();
+                              break;
+                        }
                         t = Math.Max(t, i - stack.Pop());
                         break;
                     }
