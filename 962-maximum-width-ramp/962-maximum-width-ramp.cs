@@ -10,12 +10,11 @@ public class Solution {
                     {
                     stack.Push(i);
                     }
-                  
-                
-            }
+                         
+                 }
              
-                Queue<int> temp = new Queue<int>();
-           while(stack.Count()!= 0)
+                
+              while(stack.Count()!= 0)
             {
                 for (int i = nums.Length - 1; i >= 0; i--)
                 {
