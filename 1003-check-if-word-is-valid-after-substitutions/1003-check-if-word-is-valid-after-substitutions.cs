@@ -7,22 +7,17 @@ public class Solution {
                 if(stack.Count()>1)
                 {
                     char r = stack.Pop();
-                    char m = stack.Peek();
-                    if ( String.Concat( s[i],r,m )== "cba")
-                    {
-                        stack.Pop();
-                    }
-                    else
+                   
+                    if ( String.Concat( s[i],r,stack.Peek() )== "cba")
+                       stack.Pop();
+                     else
                     {
                         stack.Push(r);
                         stack.Push(s[i]);
                     }
                 }
-                else
-                {
-                    stack.Push(s[i]);
-
-                }
+                else  stack.Push(s[i]);
+ 
             }
             return stack.Count() == 0;
     }
