@@ -7,17 +7,12 @@ public class Solution {
                 int middle = left+  ((right - left) / 2);
                 
                 if(nums[middle]> target)
-                {
-                    right = middle-1;
-                }
+                  right = middle-1;
                   else if (nums[middle] < target)
-                {
-                    left = middle+1;
-                }
-                else
-                {
+                  left = middle+1;
+                  else
                     return middle;
-                }
+                
                
             }
             return -1;
